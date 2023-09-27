@@ -1,0 +1,393 @@
+/*START Navber*/
+.nav-body {
+	background: #424242;
+	color: white;
+}
+
+/*Navber END*/
+
+
+body {
+	background: #e2e2e2;
+}
+
+
+/* START HERO BANNER*/
+.banner {
+	background: repeating-linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .5)), url(../images/call-center-banner.png);
+	width: 100%;
+	height: 93vh;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	justify-content: center;
+}
+
+/*BANNER TEXT*/
+.b-text {
+	text-align: center;
+	padding-top: 245px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* END HERO BANNER*/
+
+.signup {
+	background: #355C7D;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.signupForm {
+	background: #355C7D;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border-radius: 15px;
+
+}
+
+
+
+/*/////////////////////////////////////////////////////*/
+
+/*START SIGNUP FORM STYLES*/
+
+.loginform {
+	background: #aa4b6b;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.brand-wrapper {
+	margin-bottom: 19px;
+}
+
+.brand-wrapper .logo {
+	height: 37px;
+}
+
+.login-card {
+	border: 0;
+	border-radius: 27.5px;
+	box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+	overflow: hidden;
+	background: #355C7D;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.login-card-img {
+	border-radius: 0;
+	position: inherit;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.login-card .card-body {
+	padding: 85px 60px 60px;
+}
+
+@media (max-width: 422px) {
+	.login-card .card-body {
+		padding: 35px 24px;
+	}
+}
+
+.login-card-description {
+	font-size: 25px;
+	color: #000;
+	font-weight: normal;
+	margin-bottom: 23px;
+}
+
+.login-card form {
+	max-width: 326px;
+}
+
+.login-card .form-control {
+	border: 1px solid #d5dae2;
+	padding: 15px 25px;
+	margin-bottom: 20px;
+	min-height: 45px;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.login-card .form-control::-webkit-input-placeholder {
+	color: #919aa3;
+}
+
+.login-card .form-control::-moz-placeholder {
+	color: #919aa3;
+}
+
+.login-card .form-control:-ms-input-placeholder {
+	color: #919aa3;
+}
+
+.login-card .form-control::-ms-input-placeholder {
+	color: #919aa3;
+}
+
+.login-card .form-control::placeholder {
+	color: #919aa3;
+}
+
+.login-card .login-btn {
+	padding: 13px 20px 12px;
+	background-color: #000;
+	border-radius: 4px;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #fff;
+	margin-bottom: 24px;
+}
+
+.login-card .login-btn:hover {
+	border: 1px solid #000;
+	background-color: transparent;
+	color: #000;
+}
+
+.login-card .forgot-password-link {
+	font-size: 14px;
+	color: #919aa3;
+	margin-bottom: 12px;
+}
+
+.login-card-footer-text {
+	font-size: 16px;
+	color: #0d2366;
+	margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+	.login-card-footer-text {
+		margin-bottom: 24px;
+	}
+}
+
+.login-card-footer-nav a {
+	font-size: 14px;
+	color: #919aa3;
+}
+
+/*END LOGIN-FORM*/
+
+/*//////////////////////////////////////////////////////////*/
+
+/* START User Panel Sideber */
+
+@media only screen and (max-width: 600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		height: 100vh;
+		background: floralwhite;
+		position: fixed;
+		padding-top: 20px;
+	}
+	
+	.content {
+		margin-left: 0% !important;
+	}
+	
+	
+}
+
+.sidebar {
+	width: 20%;
+	background: whitesmoke;
+	height: 100%;
+	position: fixed;
+	padding-top: 40px;
+	z-index: 99999999999999999999999999999;
+	
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+	display: block;
+	padding: 10px 20px;
+
+
+}
+
+.sidebar a:hover {
+	background-color: #d5dae2;
+	color: black;
+	font-size: 20px;
+	
+
+}
+
+.sidebar .divider {
+	height: .5px;
+	width: 100%;
+	background: antiquewhite;
+	margin-top: 10px;
+}
+
+.sidebar .closebtn {
+	font-size: 35px;
+	cursor: pointer;
+	color: red;
+	position: absolute;
+	top: 0;
+	right: 30px;
+	
+}
+
+
+
+/* END User Panel Sideber */
+
+/*//////////////////////////////////////////////////////////////////*/
+
+/* START User Panel Main Content */
+.content {
+	margin-left: 20%;
+	padding-left: 5vh;
+	padding-right: 5vh;
+	
+}
+
+/* END User Panel Main Content */
+
+/*//////////////////////////////////////////////////////////////////*/
+
+/* START User Contacts View Pagination Style */
+
+.pagination-outer {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.pagination {
+	font-family: 'Poppins', sans-serif;
+	display: inline-flex;
+}
+
+.pagination li {
+	margin: 0 5px;
+}
+
+.pagination li a.page-link {
+	color: #999;
+	background: #e7e7e7;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 37px;
+	height: 38px;
+	width: 40px;
+	padding: 0;
+	border: none;
+	border-radius: 5px;
+	display: block;
+	position: relative;
+	transition: all 0.3s ease 0s;
+	text-align: center;
+}
+
+.pagination li.active a.page-link,
+.pagination li a.page-link:hover,
+.pagination li.active a.page-link:hover,
+.pagination li a.page-link:focus {
+	color: #fff;
+	background: linear-gradient(#fc6767, #ec008c);
+	border: none;
+}
+
+.pagination li a.page-link:before {
+	content: '';
+	background: linear-gradient(to right bottom, #ec008c, #fc6767);
+	height: 10px;
+	width: 10px;
+	border-radius: 2px;
+	opacity: 0;
+	transform: translateX(-50%) rotate(45deg);
+	position: absolute;
+	left: 50%;
+	top: 4px;
+	z-index: -1;
+	transition: all 0.3s ease 0s;
+}
+
+.pagination li.active a.page-link:before,
+.pagination li a.page-link:hover:before,
+.pagination li a.page-link:focus:before {
+	opacity: 1;
+	top: -4px;
+}
+
+.pagination li:first-child a.page-link,
+.pagination li:last-child a.page-link {
+	font-size: 20px;
+	line-height: 34px;
+	width: 38px;
+	border-bottom: 3px solid;
+}
+
+.pagination li:first-child a.page-link:hover,
+.pagination li:last-child a.page-link:hover {
+	color: #fff;
+	background: transparent;
+	border-bottom-color: #ec008c;
+}
+
+.pagination li:first-child a.page-link:focus,
+.pagination li:last-child a.page-link:focus {
+	color: #999;
+	background: #e7e7e7;
+}
+
+.pagination li:first-child a.page-link:before,
+.pagination li:last-child a.page-link:before {
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.pagination li:first-child a.page-link:hover:before,
+.pagination li:last-child a.page-link:hover:before {
+	transform: translateX(-50%) translateY(-50%) rotate(45deg) scale(2);
+}
+
+.pagination li:first-child a.page-link:focus:before,
+.pagination li:last-child a.page-link:focus:before {
+	opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+	.pagination {
+		font-size: 0;
+		display: block;
+	}
+
+	.pagination li {
+		margin: 5px 0;
+		display: inline-block;
+	}
+
+
+/* END User Contacts View Pagination Style */

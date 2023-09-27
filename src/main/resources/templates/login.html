@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="parent::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="title"></title>
+</head>
+
+<body>
+	<!-- START Login Form-->
+	<section class="loginform">
+		<div class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+			<div class="container mt-3">
+				<div class="card login-card">
+					<div class="row no-gutters">
+						<div class="col-md-5">
+							<img th:src="@{../images/Header-Image_Customer-service-768x739.png}" alt="login"
+								class="login-card-img">
+						</div>
+						<div class="col-md-7">
+							<div class="card-body">
+								<div class="brand-wrapper">
+									<span class="text-white">CLUSTER CALL CENTER</span>
+								</div>
+								<p class="login-card-description">Sign into your account</p>
+								
+								
+								<!-- START SHOWING ALERT MESSAGE -->
+								<div class="container text-center">
+									<div th:if="${session.message}" class="alert alert-dismissible fade show" th:classappend="${session.message.type}"
+										role="alert">
+										<strong th:text="${session.message.content}"></strong>
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+										<th:block th:text="${@sessionHelper.removeMessage('message')}"></th:block>
+									</div>
+								</div>
+								<!-- END SHOWING ALERT MESSAGE -->
+								
+
+								<!-- START SHOWING ALERT MESSAGE-->
+								<div th:if="${param.error}" class="alert alert-danger alert-dismissible fade show"
+									role="alert">
+									Invalid User Name And Password
+									<button type="button" class="btn-close" data-bs-dismiss="alert"
+										aria-label="Close"></button>
+								</div>
+
+								<div th:if="${param.logout}" class="alert alert-info alert-dismissible fade show">
+									Logout Successfully
+									<button type="button" class="btn-close" data-bs-dismiss="alert"
+										aria-label="Close"></button>
+								</div>
+								<!-- END SHOWING ALERT MESSAGE-->
+
+								<form th:action="@{/processLogin}" method="post">
+									<div class="form-group">
+										<label for="email" class="sr-only">Email</label>
+										<input type="email" name="username" id="email" class="form-control"
+											placeholder="Email address" required autofocus />
+									</div>
+									<div class="form-group mb-4">
+										<label for="password" class="sr-only">Password</label>
+										<input type="password" name="password" id="password" class="form-control"
+											placeholder="***********" required />
+									</div>
+									<input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit"
+										value="Login">
+								</form>
+								<a href="#" class="forgot-password-link">Forgot password?</a>
+								<p class="login-card-footer-text">Don't have an account? <a href=""
+										class="text-reset" th:href="@{/signup}">Register here</a></p>
+								<nav class="login-card-footer-nav">
+									<a href="" th:href="@{/faq}">Terms of use.</a>
+									<a href="" th:href="@{/faq}">Privacy policy</a>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--END Login Form-->
+
+	</section>
+</body>
+
+</html>

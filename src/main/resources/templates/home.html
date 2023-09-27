@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="parent::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="title"></title>
+</head>
+
+<body>
+	<section class="home">
+		<div class="banner">
+			<h1 class="b-text">WELLCOME CLUSTER CLOUD</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+				Reprehenderit facilis consequuntur eum iusto quas numquam?</p>
+			<a th:href="@{/login}"><button class="btn btn-outline-success">START HERE</button></a>
+		</div>
+	</section>
+</body>
+
+</html>

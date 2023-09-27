@@ -1,0 +1,287 @@
+/*START User Profile Style*/
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+/*END User Profile Style*/
+
+
+/*START User Profile Setting Style*/
+.form-control:focus {
+	box-shadow: none;
+	border-color: #BA68C8
+}
+
+.profile-button {
+	background: rgb(99, 39, 120);
+	box-shadow: none;
+	border: none
+}
+
+.profile-button:hover {
+	background: #682773
+}
+
+.profile-button:focus {
+	background: #682773;
+	box-shadow: none
+}
+
+.profile-button:active {
+	background: #682773;
+	box-shadow: none
+}
+
+.back:hover {
+	color: #682773;
+	cursor: pointer
+}
+
+.labels {
+	font-size: 11px
+}
+
+.add-experience:hover {
+	background: #BA68C8;
+	color: #fff;
+	cursor: pointer;
+	border: solid 1px #BA68C8
+}
+
+
+
+/*User Profile Upload New Image Style*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+	
+.upload {
+  --btn-color: #3bafda;
+  --progress-color: #2d334c;
+  --ease-in-out-quartic: cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1.7px 1.4px rgba(0, 0, 0, 0.02), 0 4px 3.3px rgba(0, 0, 0, 0.028), 0 7.5px 6.3px rgba(0, 0, 0, 0.035), 0 13.4px 11.2px rgba(0, 0, 0, 0.042), 0 25.1px 20.9px rgba(0, 0, 0, 0.05), 0 60px 50px rgba(0, 0, 0, 0.07);
+	overflow: hidden;
+	transform: rotate(0);
+	max-width: 385px;
+	height: 58px;
+}
+
+.upload__info {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-right: -70px;
+}
+
+.upload__filename {
+  padding-left: 8px;
+}
+.upload__button {
+  position: relative;
+  padding: 16px;
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+  color: white;
+  background: none;
+  border: none;
+  border-radius: inherit;
+  outline: none;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.upload__button::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--btn-color);
+  border-radius: inherit;
+  transform-origin: right;
+}
+.upload__hint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transform: translateY(100%);
+}
+.upload__progress {
+  position: absolute;
+  content: "";
+  top: 90%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: var(--progress-color);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.upload__progress .check {
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  margin-right: 6px;
+}
+.upload.uploading .upload__button {
+  animation: expand 0.3s forwards;
+}
+.upload.uploading .upload__button::before {
+  animation: fill-left 1.2s 0.4s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploading .upload__info > *,
+.upload.uploading .upload__button__text {
+  animation: fade-up-out 0.4s 0.4s forwards;
+}
+.upload.uploading .upload__hint {
+  animation: fade-up-in 0.4s 0.8s forwards;
+}
+.upload.uploading .upload__progress {
+  animation: fill-right 2s 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded .upload__progress {
+  animation: slide-up 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded .upload__progress .check {
+  animation: stroke-in 0.6s 0.4s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded-after .upload__info {
+  animation: slide-down-info 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded-after .upload__button {
+  animation: slide-down-button 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded-after .upload__progress {
+  animation: slide-down-progress 1s var(--ease-in-out-quartic) forwards;
+}
+
+@keyframes expand {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fill-left {
+  to {
+    transform: scale(4, 1.2);
+  }
+}
+@keyframes fade-up-out {
+  to {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+}
+@keyframes fade-up-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fill-right {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: scaleX(1) translateY(0);
+  }
+  to {
+    transform: scaleX(1) translateY(-90%);
+  }
+}
+@keyframes stroke-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes slide-down-info {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-down-button {
+  from {
+    transform: scale(0.9) translateY(-100%);
+  }
+  to {
+    transform: scale(0.9) translateY(0);
+  }
+}
+@keyframes slide-down-progress {
+  from {
+    transform: scaleX(1) translateY(-90%);
+  }
+  to {
+    transform: scaleX(1) translateY(10%);
+  }
+}
+
+/*User Profile New Profile Style*/
+
+
+
+
+/*END User Profile Setting Style*/
+
+
