@@ -1,5 +1,7 @@
 # Cloud Contact Keeper
 
+CloudContactKeeper is a modern and secure contact management application built using Spring Boot. It empowers users to effortlessly store and manage their contact information in the cloud. With an intuitive user interface and robust data protection measures, CloudContactKeeper simplifies the task of organizing and accessing essential contact details from anywhere. Users can securely log in, add, edit, and sync their contacts, ensuring that their address book is always up to date and readily available whenever they need it. Say goodbye to the hassle of manual contact management and experience the convenience and reliability of CloudContactKeeper.
+
 Cloud Contact Keeper is a robust web application designed to streamline contact management and secure your personal or business contacts with ease.
 Built using Java Spring Boot, Spring Security, Spring Data JPA, and MySQL And Thymeleaf Template Engine, it offers a comprehensive set of features to ensure a hassle-free experience when managing your contacts.
 
