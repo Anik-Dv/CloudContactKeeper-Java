@@ -48,4 +48,4 @@ We welcome contributions from the community to improve and expand the functional
 5. Submit a pull request to the main repository.
 
 ## Contact
-If you have any questions, feedback, or encounter issues, please feel free to reach out to us at royanik815@.com
+If you have any questions, feedback, or encounter issues, please feel free to reach out to us at royanik815@gmail.com
