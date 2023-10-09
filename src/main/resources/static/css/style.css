@@ -389,5 +389,54 @@ body {
 		display: inline-block;
 	}
 
-
+}
 /* END User Contacts View Pagination Style */
+
+
+/* START User Contact Search Style*/
+.search-container {
+	display: flex;
+	flex-direction: row-reverse;
+	align-content: center;
+	align-items: center;
+}
+
+.search-input {
+	width: 349px;
+	display: flex;
+	margin: 10px;
+}
+
+.search-result {
+	width: 350px;
+    background: floralwhite;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    margin-top: 47px;
+    display: none;
+}
+
+
+/*END Search*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -80,36 +80,74 @@ function logoutComfirm() {
 
 
 
+/*////////////////////////////////////////////////////*/
+
+
+/*START Search User Contact */
+
+const searchContact = () => {
+	let query = $("#input-val").val();
+	if (query == "") {
+		// skip
+		$(".search-result").hide();
+
+	} else {
+		// search 				
+		/*send request to server for fetch data*/
+		let url = `http://localhost:8282/search/${query}`;
+
+		fetch(url)
+			.then((response) => {
+				return response.json();
+			})
+			.then((data) => {
+
+				let element = `<div class='list-group'> `;
+
+				data.forEach((contact) => {
+					element += `<a href='http://localhost:8282/user/contact-profile/0/${contact.cId}' class='list-group-item list-group-item-action'>${contact.firstName} ${contact.lastName}</a>`;
+				})
+				
+				if(data == '') {
+					element += `<span class='text-center'>No Contact Found!<span>`;
+				}
+
+				element += `</div>`;
+
+				$(".search-result").html(element);
+
+				$(".search-result").show();
+			})
+	}
+}
+
+
+/*END Search User Contact */
+
+
+
 
 /*START User Profile Update Profile Image progress btn*/
 
-"use strict";
-let sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
-let upload = document.querySelector(".upload");
-let uploadBtn = document.querySelector(".upload__button");
-uploadBtn.addEventListener("click", async () => {
-    upload.classList.add("uploading");
-    await sleep(3000);
-    upload.classList.add("uploaded");
-    await sleep(2000);
-    upload.classList.remove("uploading");
-    upload.classList.add("uploaded-after");
-    await sleep(1000);
-    upload.className = "upload";
+let sleep = (time) => new Promise((resolve) => {
+	setTimeout(resolve, time);
 });
 
+let upload = document.querySelector(".upload");
+let uploadBtn = document.querySelector(".upload__button");
 
-
-
-
+uploadBtn.addEventListener("click", async () => {
+	upload.classList.add("uploading");
+	await sleep(3000);
+	upload.classList.add("uploaded");
+	await sleep(2000);
+	upload.classList.remove("uploading");
+	upload.classList.add("uploaded-after");
+	await sleep(1000);
+	upload.className = "upload";
+});
 
 /*END User Profile Update Image Progress Btn*/
-
-
-
-
-
-
 
 
 
