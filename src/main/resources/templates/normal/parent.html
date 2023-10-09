@@ -19,11 +19,24 @@
 	
 	<!--Sweet-Alert-->
 	<link rel="stylesheet" href="sweetalert2.min.css">
+	
+	 <!-- vendor css -->
+    <link rel="stylesheet" th:href="@{/css/style-dashboard.css}">
 		
 	<title th:text="${title}"></title>
 </head>
 
 <body>
+	
+	
+	<!-- [ Pre-loader ] start -->
+	<!--<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>-->
+	<!-- [ Pre-loader ] End -->
+	
 
 	<!--START Navber-->
 	<nav class="navbar navbar-expand-lg navbar-dark nav-body fixed-top">
@@ -47,16 +60,33 @@
 						<a class="nav-link" th:href="@{/faq}">faq</a>
 					</li>
 					
-					<li class="nav-item">
-						<a class="nav-link border border-success rounded" style="margin-right: 5px;" th:href="@{/user/profile/0}">
-							<span th:text="${user.name}"></span> <span th:text="${user.sureName}"></span>
-						</span>
-						</a>
+					<li class="nav-item">						
+						<div class="dropdown drp-user">
+							<a href="#" class="btn btn-none text-light dropdown-toggle dropdown-toggle border border-success rounded" style="margin-right: 5px;" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bi bi-person-lines-fill text-c-green"></i> &nbsp; <span th:text="${user.name}"></span> <span th:text="${user.sureName}"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right profile-notification" aria-labelledby="dropdownMenu">
+								<div class="pro-head">
+									<img src="#" th:src="@{'/images/'+${user.image}}" width="40" height="40" class="img-radius ml-2" style="border: 1px solid green;" alt="User-Profile-Image">
+									<span th:text="${user.name}"></span> <span th:text="${user.sureName}"></span>
+									<a href="#" class="dud-logout" title="Logout">
+										<i class="bi bi-box-arrow-right"></i>
+									</a>
+								</div>
+								<ul class="pro-body" style="list-style: none;">
+									<li><a th:href="@{/user/profile/0}" class="dropdown-item"><i class="bi bi-person-lines-fill" style="color: #C2185B;"></i> Profile</a></li>
+									<li><a th:href="@{/user/view-contacts/0}" class="dropdown-item"><i class="feather icon-mail"></i> My Contacts</a>
+									</li>
+									<li><a th:onclick="|logoutComfirm()|" class="dropdown-item"><i class="feather icon-lock"></i> Logout</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</li>
 
 					<li class="nav-item">
 						<a class="nav-link border border-danger rounded btn btn-outline-danger"
-							th:onclick="|logoutComfirm()|">Logout <i class="bi bi-box-arrow-right"></i></a>
+							th:onclick="|logoutComfirm()|" style="cursor: pointer;">Logout <i class="bi bi-box-arrow-right"></i></a>
 					</li>
 
 				</ul>
@@ -67,7 +97,7 @@
 
 
 	<!--START Sideber-->
-	<main class="sidebar mt-2">
+	<!--<main class="sidebar mt-2">
 		<span onclick="toggleSidebar()" class="closebtn">&times;</span>
 
 		<a class="item" href="#" th:href="@{/user/dashboard}"> <i class="bi bi-house"></i> Home</a>
@@ -77,9 +107,87 @@
 		<a class="item" href="#" th:href="@{/user/profile-setting}"><i class="bi bi-sliders"></i> Settings</a>
 		<a class="item" href="#" th:onclick="|logoutComfirm()|"><i class="bi bi-box-arrow-left"></i> Logout</a>
 		<div class="divider"></div>
-	</main>
+	</main>-->
 
 	<!--END Sideber-->
+	
+	
+	
+	
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar mt-1 sidebar">
+		<span onclick="toggleSidebar()" class="closebtn">&times;</span>
+		<div class="navbar-wrapper  ">
+			<div class="navbar-content scroll-div " >
+				<div class="">
+					<div class="main-menu-header">
+						<img class="img-radius" th:src="@{'/images/'+${user.image}}" alt="User-Profile-Image">
+						<div class="user-details">
+							<span th:text="${user.name}"></span> <span th:text="${user.sureName}"></span>
+							<div id="more-details"><span th:text="${user.role}"></span> <i class="bi bi-chevron-double-down"></i></div>
+						</div>
+					</div>
+					<div class="collapse" id="nav-user-link">
+						<ul class="list-unstyled">
+							<li class="list-group-item text-light"><a th:href="@{/user/profile/0}"><i class="bi bi-person"></i> View Profile</a></li>
+							<li class="list-group-item text-light"><a th:href="@{/user/profile-setting}"><i class="bi bi-gear-fill"></i> Settings</a></li>
+							<li class="list-group-item text-light"><a th:onclick="|logoutComfirm()|"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<ul class="nav pcoded-inner-navbar">
+					
+					<li class="nav-item pcoded-menu-caption">
+						<label>Navigation</label>
+					</li>
+					
+					<li class="nav-item">
+					    <a th:href="@{/user/dashboard}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					</li>
+					
+					<li class="nav-item">
+					    <a th:href="@{/user/add-contact}" class="nav-link "><span class="pcoded-micon"><i class="bi bi-person-plus-fill"></i></span><span class="pcoded-mtext">Add Contact</span></a>
+					</li>
+					
+					<li class="nav-item">
+					    <a th:href="@{/user/view-contacts/0}" class="nav-link "><span class="pcoded-micon"><i class="bi bi-view-list"></i></span><span class="pcoded-mtext">View Contacts</span></a>
+					</li>
+					
+					<li class="nav-item">
+					    <a th:href="@{/user/profile/0}" class="nav-link "><span class="pcoded-micon"><i class="bi bi-person-lines-fill"></i></span><span class="pcoded-mtext">View Profile</span></a>
+					</li>
+					
+					<li class="nav-item">
+					    <a th:href="@{/user/profile-setting}" class="nav-link "><span class="pcoded-micon"><i class="bi bi-sliders"></i></span><span class="pcoded-mtext">Profile Setting</span></a>
+					</li>
+					
+					<li class="nav-item">
+					    <a th:onclick="|logoutComfirm()|" class="nav-link "><span class="pcoded-micon"><i class="bi bi-box-arrow-left"></i></span><span class="pcoded-mtext">Logout</span></a>
+					</li>
+					
+					
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
